@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Daily Veggies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-white shadow-md p-4 flex justify-between items-center">
+        <div class="text-lg font-bold">Daily Veggies</div>
+        <div class="space-x-4">
+            <a href="../index.html" class="text-gray-700">Home</a>
+            <a href="categories.html" class="text-gray-700">Categories</a>
+            <a href="cart.html" class="text-gray-700">Cart</a>
+            <a href="profile.html" class="text-gray-700">Profile</a>
+            <a href="login.html" class="bg-green-700 text-white px-4 py-2 rounded">Login</a>
+        </div>
+    </nav>
+    <section class="max-w-md mx-auto p-6 mt-10 bg-white shadow-lg rounded-lg">
+        <h2 class="text-2xl font-bold text-green-700 text-center">Create Your Account</h2>
+        <div class="bg-green-50 p-4 rounded-lg mt-4">
+            <h3 class="font-semibold">Join Daily Veggies</h3>
+            <p>Create an account to enjoy fresh produce delivered to your doorstep</p>
+        </div>
+        <form action="userdashboard.html" method="POST" class="mt-4">
+            <label class="block">Full Name</label>
+            <input type="text" placeholder="Enter your full name" class="w-full p-2 border rounded mb-2">
+            
+            <label class="block">Email Address</label>
+            <input type="email" placeholder="Enter your email address" class="w-full p-2 border rounded mb-2">
+            
+            <label class="block">Phone Number</label>
+            <input type="tel" placeholder="Enter your phone number" class="w-full p-2 border rounded mb-2">
+            
+            <label class="block">Password</label>
+            <input type="password" placeholder="Create a password" class="w-full p-2 border rounded mb-2">
+            
+            <label class="block">Confirm Password</label>
+            <input type="password" placeholder="Confirm your password" class="w-full p-2 border rounded mb-2">
+            
+            <p class="text-sm text-gray-600 mt-2">By registering, you agree to our <a href="#" class="text-green-700">Terms of Service</a> and <a href="#" class="text-green-700">Privacy Policy</a></p>
+            
+            <button type="submit" class="w-full bg-green-700 text-white px-4 py-2 rounded mt-4">Create Account</button>
+        </form>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log("Registration page loaded");
+        });
+    </script>
+</body>
+</html>

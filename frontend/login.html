@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Daily Veggies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md p-4 flex justify-between items-center">
+        <div class="text-lg font-bold">Daily Veggies</div>
+        <div class="space-x-4">
+            <a href="../index.html" class="text-gray-700">Home</a>
+            <a href="categories.html" class="text-gray-700">Categories</a>
+            <a href="cart.html" class="text-gray-700">Cart</a>
+            <a href="profile.html" class="text-gray-700">Profile</a>
+            <a href="register.html" class="bg-green-700 text-white px-4 py-2 rounded">Register</a>
+        </div>
+    </nav>
+
+    <!-- Login Form -->
+    <section class="max-w-md mx-auto p-6 mt-10 bg-white shadow-lg rounded-lg">
+        <h2 class="text-2xl font-bold text-green-700 text-center">Login to Daily Veggies</h2>
+        <div class="bg-green-50 p-4 rounded-lg mt-4">
+            <h3 class="font-semibold">Welcome Back</h3>
+            <p>Login to access your account, track orders, and manage your profile.</p>
+        </div>
+
+        <form id="login-form" class="mt-4">
+            <label class="block">Email or Phone Number</label>
+            <input id="username" type="text" placeholder="Enter your name" required class="w-full p-2 border rounded mb-2">
+            
+            <label class="block">Password</label>
+            <input type="password" placeholder="Enter your password" required class="w-full p-2 border rounded mb-2">
+            
+            <a href="#" class="text-green-700 text-sm float-right">Forgot Password?</a>
+            
+            <button type="submit" class="w-full bg-green-700 text-white px-4 py-2 rounded mt-4">Login</button>
+        </form>
+
+        <p class="text-center mt-4">Don't have an account? <a href="register.html" class="text-green-700">Register Now</a></p>
+    </section>
+
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent form submission
+            
+            let username = document.getElementById("username").value;
+            if (username.trim() === "") {
+                alert("Please enter your name");
+                return;
+            }
+
+            // Store username in localStorage
+            localStorage.setItem("username", username);
+
+            // Check if user was redirected from cart
+            let redirectPage = localStorage.getItem("redirectAfterLogin");
+            if (redirectPage) {
+                localStorage.removeItem("redirectAfterLogin"); // Clear the redirect flag
+                window.location.href = redirectPage;
+            } else {
+                window.location.href = "userdashboard.html"; // Default redirect to dashboard
+            }
+        });
+    </script>
+
+</body>
+</html>
