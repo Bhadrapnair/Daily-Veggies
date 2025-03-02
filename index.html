@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Veggies | Fresh Produce</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md p-4 flex justify-between items-center">
+        <div class="text-lg font-bold text-green-700">Daily Veggies</div>
+        <div class="space-x-4">
+            <a href="./frontend/login.html" class="bg-green-600 text-white px-4 py-2 rounded">Login</a>
+            <a href="./frontend/register.html" class="bg-gray-700 text-white px-4 py-2 rounded">Register</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="text-center p-10">
+        <h1 class="text-4xl font-bold text-black">Welcome to Daily Veggies</h1>
+        <p class="text-lg text-gray-700 mt-2">Your one-stop shop for farm-fresh vegetables</p>
+        <a href="./frontend/login.html" class="bg-green-600 text-white px-6 py-3 rounded mt-4 inline-block">Shop With Us</a>
+    </header>
+
+    <!-- Vegetable Images Section -->
+    <section class="p-10">
+        <h2 class="text-2xl font-bold text-black text-center">Fresh Vegetables</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-6">
+            <div class="bg-white p-4 shadow rounded text-center">
+                <img src="images/tomato.jpg" alt="Tomato" class="w-full h-40 object-cover rounded">
+                <h3 class="font-bold mt-2 text-black">Fresh Tomatoes</h3>
+            </div>
+            <div class="bg-white p-4 shadow rounded text-center">
+                <img src="images/spinach.jpg" alt="Spinach" class="w-full h-40 object-cover rounded">
+                <h3 class="font-bold mt-2 text-black">Green Spinach</h3>
+            </div>
+            <div class="bg-white p-4 shadow rounded text-center">
+                <img src="images/carrot.jpg" alt="Carrot" class="w-full h-40 object-cover rounded">
+                <h3 class="font-bold mt-2 text-black">Crunchy Carrots</h3>
+            </div>
+            <div class="bg-white p-4 shadow rounded text-center">
+                <img src="images/potato.jpg" alt="Potato" class="w-full h-40 object-cover rounded">
+                <h3 class="font-bold mt-2 text-black">Organic Potatoes</h3>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
